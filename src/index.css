@@ -1,0 +1,10 @@
+mz-dialog dialog {
+	max-width: min(
+		calc(100vw - calc(var(--size-2) * 2)),
+		var(--dialog-width, 500px)
+	);
+	position: fixed;
+	overflow: hidden;
+	z-index: 999;
+	margin: 10vh auto;
+}

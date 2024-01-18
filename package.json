@@ -1,0 +1,39 @@
+{
+  "name": "enhanced-dialog",
+  "version": "1.0.0",
+  "description": "A <dialog> with a few enhancements",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/enhanced-dialog.umd.js",
+  "module": "./dist/enhanced-dialog.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/enhanced-dialog.es.js",
+      "require": "./dist/enhanced-dialog.umd.js"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "build": "vite build"
+  },
+  "keywords": [
+    "dialog",
+    "modal",
+    "custom element"
+  ],
+  "author": "David Merrique",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.1.3",
+    "eslint-plugin-unicorn": "50.0.1",
+    "prettier": "^3.2.4",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11"
+  },
+  "dependencies": {
+    "focus-trap": "^7.5.4"
+  }
+}

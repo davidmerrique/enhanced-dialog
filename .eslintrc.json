@@ -1,0 +1,15 @@
+{
+	"extends": [
+		"eslint:recommended",
+		"plugin:prettier/recommended",
+		"plugin:unicorn/recommended"
+	],
+	"globals": {
+		"EnhancedDialog": "readonly"
+	},
+	"env": {
+		"browser": true,
+		"es6": true,
+		"node": true
+	}
+}
