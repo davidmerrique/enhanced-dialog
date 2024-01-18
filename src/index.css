@@ -8,3 +8,48 @@ mz-dialog dialog {
 	z-index: 999;
 	margin: 10vh auto;
 }
+
+mz-dialog dialog::backdrop {
+	background: rgb(0 0 0 / 20%);
+	backdrop-filter: blur(3px);
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+
+mz-dialog dialog[open] {
+	animation: dialog-show 0.2s ease forwards;
+}
+
+mz-dialog dialog::backdrop {
+	opacity: 1;
+}
+
+mz-dialog dialog.dialog-closing {
+	animation: dialog-hide 0.3s ease forwards;
+}
+
+mz-dialog dialog::backdrop {
+	opacity: 0;
+}
+
+@keyframes dialog-show {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes dialog-hide {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+}
